@@ -3,6 +3,7 @@ FROM ubuntu:22.04
 # ----- 환경변수 설정 -----
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/opt/venv/bin:${PATH}"
+ENV PYTHONPATH="/home/jovyan/work:${PYTHONPATH}"
 
 # ----- 필수 패키지 설치 -----
 RUN apt-get update && \
@@ -36,8 +37,8 @@ RUN /opt/venv/bin/python -m ipykernel install --user --name=venv --display-name 
 # ----- 시스템 Python 커널 제거 (선택사항) -----
 RUN jupyter kernelspec remove python3 -f || true
 
-# ----- 작업 디렉터리 설정 -----
-WORKDIR /workspace
+# ----- 작업 디렉터리 설정 (볼륨 마운트와 일치) -----
+WORKDIR /home/jovyan/work
 
 # ----- JupyterLab 실행 (가상환경 사용) -----
 CMD ["/opt/venv/bin/jupyter", "lab", \
