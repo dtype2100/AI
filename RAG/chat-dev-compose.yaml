@@ -7,7 +7,7 @@ services:
     ports:
       - "11434:11434"
     volumes:
-      - ollama_data:/root/.ollama
+      - ./ollama:/root/.ollama
     restart: unless-stopped
 
   ### Vector store (Qdrant)
@@ -17,7 +17,7 @@ services:
     ports:
       - "6333:6333"
     volumes:
-      - qdrant_data:/qdrant/storage
+      - ./qdrant:/qdrant/storage
     restart: unless-stopped
 
   ### FastAPI backend providing RAG APIs
@@ -45,6 +45,8 @@ services:
       - "3000:3000"
     environment:
       - API_BASE_URL=http://api:8000
+    volumes:
+      - ./web_ui:/app
     restart: unless-stopped
 
   ### Jupyter Notebook environment
@@ -62,6 +64,5 @@ services:
       - qdrant
     restart: unless-stopped
 
-volumes:
-  ollama_data: {}
-  qdrant_data: {}
+# 로컬 경로 마운트를 사용하므로 volumes 섹션이 필요 없음
+  

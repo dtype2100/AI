@@ -1,1 +1,137 @@
+# ===== 환경 변수 =====
 .env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# ===== AI/RAG 특정 파일 =====
+
+# Ollama 모델 및 데이터 (대용량 파일)
+RAG/ollama/
+RAG/ollama/models/
+RAG/ollama/models.json
+RAG/ollama/.ollama/
+
+# Qdrant 벡터 데이터베이스
+RAG/qdrant/
+RAG/qdrant/collections/
+RAG/qdrant/aliases/
+RAG/qdrant/raft_state.json
+
+# 실험 결과 및 로그
+RAG/notebooks/experiments/*/results/
+RAG/notebooks/experiments/*/logs/
+RAG/notebooks/experiments/*/models/
+RAG/notebooks/experiments/*/data/
+RAG/notebooks/experiments/*/config/local_*.yaml
+RAG/notebooks/experiments/*/config/local_*.json
+
+# 테스트 결과 파일
+*_test_results.json
+*_benchmark_results.json
+*_evaluation_results.json
+
+# 모델 파일 (대용량)
+*.bin
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.tflite
+*.pb
+
+# ===== Python 관련 =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ===== 로그 및 캐시 =====
+*.log
+logs/
+log/
+.cache/
+cache/
+*.cache
+
+# ===== 보안 관련 =====
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*.pub
+secrets/
+secrets.yaml
+secrets.yml
+
+# ===== 임시 파일 =====
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# ===== IDE 및 에디터 =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===== ML/AI 특정 =====
+# Hugging Face 캐시
+.cache/huggingface/
+.cache/torch/
+.cache/transformers/
+
+# Weights & Biases
+wandb/
+
+# MLflow
+mlruns/
+mlflow.db
+
+# TensorBoard
+runs/
+tensorboard_logs/

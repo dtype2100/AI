@@ -1,0 +1,102 @@
+# ===== 실험 결과 및 데이터 =====
+
+# 결과 파일
+*/results/
+*/logs/
+*/models/
+*/data/
+
+# 로컬 설정 파일
+*/config/local_*.yaml
+*/config/local_*.json
+*/config/secrets.yaml
+*/config/secrets.json
+
+# 테스트 결과
+*_test_results.json
+*_benchmark_results.json
+*_evaluation_results.json
+*_performance_results.json
+
+# 임시 파일
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 로그 파일
+*.log
+logs/
+log/
+
+# 캐시 파일
+.cache/
+cache/
+*.cache
+
+# Jupyter 체크포인트
+.ipynb_checkpoints/
+
+# Python 캐시
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 환경 변수
+.env
+.env.local
+
+# 보안 파일
+*.key
+*.pem
+id_rsa
+id_ed25519
+*.pub
+secrets/
+
+# 대용량 모델 파일
+*.bin
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.tflite
+*.pb
+
+# 데이터 파일 (일반적으로 제외)
+*.csv
+*.tsv
+*.json
+*.xml
+*.yaml
+*.yml
+!requirements*.txt
+!*.config.yaml
+!*.config.yml
+
+# 압축 파일
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 미디어 파일
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.pdf
+
+# ML/AI 특정
+wandb/
+mlruns/
+mlflow.db
+runs/
+tensorboard_logs/
+.cache/huggingface/
+.cache/torch/
+.cache/transformers/ 

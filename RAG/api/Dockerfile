@@ -22,10 +22,10 @@ WORKDIR /app
 
 # ----- 프로젝트 requirements.txt 설치 -----
 COPY requirements.txt /tmp/
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
+RUN /opt/venv/bin/pip install --no-cache-dir -r /tmp/requirements.txt
 
 # ----- 애플리케이션 파일 복사 -----
 COPY . .
 
-# ----- FastAPI 실행 -----
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"] 
+# ----- FastAPI 실행 (가상환경 사용) -----
+CMD ["/opt/venv/bin/uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"] 
