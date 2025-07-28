@@ -32,6 +32,8 @@ services:
     depends_on:
       - ollama
       - qdrant
+    volumes:
+      - ./api:/app
     restart: unless-stopped
 
   ### Front-end (e.g. Streamlit)
@@ -45,6 +47,8 @@ services:
       - "3000:3000"
     environment:
       - API_BASE_URL=http://api:8000
+    volumes:
+      - ./web_ui:/app
     restart: unless-stopped
 
   ### Jupyter Notebook environment
