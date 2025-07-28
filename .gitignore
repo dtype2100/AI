@@ -135,3 +135,5 @@ mlflow.db
 # TensorBoard
 runs/
 tensorboard_logs/
+
+ollama
