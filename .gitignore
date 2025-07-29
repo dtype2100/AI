@@ -137,3 +137,4 @@ runs/
 tensorboard_logs/
 
 ollama
+open-webui
