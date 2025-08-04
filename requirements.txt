@@ -1,0 +1,12 @@
+requests
+dotenv
+pandas
+matplotlib
+nasdaq-data-link
+opendartreader
+yfinance
+edgartools
+ipywidgets
+sec-edgar-api
+fastapi
+uvicorn

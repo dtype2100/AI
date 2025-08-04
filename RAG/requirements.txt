@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pymilvus
+sentence-transformers
+ollama
+python-multipart
+pandas
+requests
+python-dotenv 

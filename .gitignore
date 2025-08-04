@@ -140,3 +140,6 @@ ollama
 open-webui
 
 saddle
+
+.venv
+.env
