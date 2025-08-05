@@ -10,5 +10,15 @@ ipywidgets
 sec-edgar-api
 fastapi
 uvicorn
-fastapi
 uvicorn[standard]
+langchain
+langchain-ollama    
+langchain-ollama
+langchain-community
+langchain-text-splitters
+langchain-qdrant
+qdrant-client
+pypdf
+beautifulsoup4
+huggingface-hub
+ollama

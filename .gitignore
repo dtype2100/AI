@@ -140,6 +140,7 @@ ollama
 open-webui
 
 saddle
+ai_models
 
 .venv
 .env

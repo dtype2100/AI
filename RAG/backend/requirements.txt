@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+langchain-community
+langchain-ollama
+qdrant-client
+pypdf
+beautifulsoup4
+requests
+transformers
+torch
+sentence-transformers 
