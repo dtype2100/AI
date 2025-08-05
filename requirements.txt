@@ -10,3 +10,5 @@ ipywidgets
 sec-edgar-api
 fastapi
 uvicorn
+fastapi
+uvicorn[standard]
