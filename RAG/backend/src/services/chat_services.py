@@ -16,7 +16,7 @@ class ChatService:
         self._load_env()
         
         # 환경변수에서 모델명 가져오기 (기본값: 전달받은 model_name)
-        self.model_name = os.getenv("SmolLM3-Q4_K_M", model_name)
+        self.model_name = os.getenv("OLLAMA_MODEL", model_name)
         
         # Ollama 모델 초기화
         self.model = OllamaChatModel(
