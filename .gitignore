@@ -144,3 +144,12 @@ ai_models
 
 .venv
 .env
+
+*.json
+*.jsonl
+
+vector_data
+ollama_models
+embedding_models
+data
+
