@@ -1,0 +1,32 @@
+name: embedding-server
+services:
+  embedding-server:
+    build:
+      context: .
+      dockerfile: dockerfile/Dockerfile.embedding
+    container_name: embedding-server
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEVICE=cpu
+      - LOG_LEVEL=INFO
+      - EMBEDDING_MODEL_PATH=/app/ai_models/ai_models/bge/BGE-m3-ko
+      - RERANK_MODEL_PATH=/app/ai_models/bge/bge-reranker-v2-m3-ko
+    volumes:
+      # Mount AI models for faster startup (optional)
+      - ./ai_models:/app/ai_models:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - embedding-network
+
+networks:
+  embedding-network:
+    driver: bridge
