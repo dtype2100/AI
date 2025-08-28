@@ -1,0 +1,13 @@
+dotenv
+pandas
+fastapi
+uvicorn[standard]
+langchain
+langchain-community
+langchain-ollama
+langchain-text-splitters
+langchain-qdrant
+langchain-core
+qdrant-client
+beautifulsoup4
+huggingface-hub

@@ -1,0 +1,10 @@
+FROM ollama/ollama:latest
+
+WORKDIR /app
+
+# 모델 파일 포함 (프로덕션 환경)
+# COPY ../ollama_server/ai_models/google/gemma-3-1b-pt-q4_0.gguf /root/.ollama/models/
+COPY ../ollama_server/Modelfile /root/.ollama/Modelfile
+
+# RUN ollama create gemma-3-1b -f /root/.ollama/Modelfile
+

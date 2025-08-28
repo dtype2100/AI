@@ -1,0 +1,3 @@
+FROM /root/.ollama/models/gemma-3-1b-pt-q4_0.gguf
+
+temperate 0.2

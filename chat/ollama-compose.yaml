@@ -1,0 +1,12 @@
+name: ml-server
+services:
+  ollama:
+    build:
+      context: .
+      dockerfile: dockerfile/Dockerfile.ollama
+    container_name: ollama
+    volumes:
+      - ./ollama_server:/root/.ollama
+      - ./ai_models/google:/root/.ollama/models/google
+    ports:
+      - "11435:11434"

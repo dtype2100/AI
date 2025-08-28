@@ -1,2 +1,0 @@
-# backend.src package initializer
-
